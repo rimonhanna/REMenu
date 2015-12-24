@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "RootViewController.h"
 
-@interface HomeViewController : RootViewController
+@interface HomeViewController : RootViewController <REMenuDelegate, REMenuDataSource>
+
+@property (strong, nonatomic) REMenu *menu;
+
+- (void)toggleMenu;
 
 @end

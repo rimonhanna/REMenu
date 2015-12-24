@@ -221,20 +221,50 @@
     if (endedPoint.y < 0 || endedPoint.y > CGRectGetHeight(self.bounds))
         return;
     
-    if (!self.menu.closeOnSelection) {
+    if (!self.menu.closeOnSelection)
+    {
         if (self.item.action)
+        {
             self.item.action(self.item);
-    } else {
-        if (self.item.action) {
-            if (self.menu.waitUntilAnimationIsComplete) {
+        }
+        else
+        {
+            [self.menu.delegate reMenu:self.menu didSelectItemAtIndex:[self.menu.items indexOfObject:self.item]];
+        }
+    }
+    else
+    {
+        if (self.item.action)
+        {
+            if (self.menu.waitUntilAnimationIsComplete)
+            {
                 __typeof (&*self) __weak weakSelf = self;
-                [self.menu closeWithCompletion:^{
+                [self.menu closeWithCompletion:^
+                {
                     weakSelf.item.action(weakSelf.item);
                 }];
-            } else {
+            }
+            else
+            {
                 [self.menu close];
                 self.item.action(self.item);
             }
+        }
+        else
+        {
+            if (self.menu.waitUntilAnimationIsComplete)
+            {
+                [self.menu closeWithCompletion:^
+                 {
+                     [self.menu.delegate reMenu:self.menu didSelectItemAtIndex:[self.menu.items indexOfObject:self.item]];
+                 }];
+            }
+            else
+            {
+                [self.menu close];
+                [self.menu.delegate reMenu:self.menu didSelectItemAtIndex:[self.menu.items indexOfObject:self.item]];
+            }
+            
         }
     }
 }

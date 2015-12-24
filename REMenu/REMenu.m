@@ -186,9 +186,28 @@
     
     CGFloat navigationBarOffset = self.appearsBehindNavigationBar && self.navigationBar ? 64 : 0;
     
+    
+    if(self.dataSource && (!self.items || self.items.count == 0))
+    {
+        NSMutableArray *mutableItems = [NSMutableArray array];
+        if([self.dataSource respondsToSelector:@selector(numberOfItemsInREMenu:)]
+           && [self.dataSource respondsToSelector:@selector(reMenu:itemAtIndex:)])
+        {
+            NSUInteger numberOfItems = [self.dataSource numberOfItemsInREMenu:self];
+            for (NSUInteger i = 0; i < numberOfItems; i++)
+            {
+                REMenuItem *item = [self.dataSource reMenu:self itemAtIndex:i];
+                [mutableItems addObject:item];
+            }
+            
+            self.items = [NSArray arrayWithArray:mutableItems];
+        }
+    }
+    
     // Append new item views to REMenuView
     //
-    for (REMenuItem *item in self.items) {
+    for (REMenuItem *item in self.items)
+    {
         NSInteger index = [self.items indexOfObject:item];
         
         CGFloat itemHeight = self.itemHeight;

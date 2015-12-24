@@ -49,7 +49,21 @@ typedef NS_ENUM(NSInteger, REMenuLiveBackgroundStyle) {
 -(void)willCloseMenu:(REMenu *)menu;
 -(void)didCloseMenu:(REMenu *)menu;
 
+- (void)reMenu:(REMenu *)menu didSelectItemAtIndex:(NSUInteger)index;
+
 @end
+
+
+@protocol REMenuDataSource <NSObject>
+
+@required
+
+- (NSUInteger)numberOfItemsInREMenu:(REMenu *)menu;
+
+- (REMenuItem *)reMenu:(REMenu *)menu itemAtIndex:(NSUInteger)index;
+
+@end
+
 
 @interface REMenu : NSObject 
 
@@ -64,6 +78,7 @@ typedef NS_ENUM(NSInteger, REMenuLiveBackgroundStyle) {
 @property (copy, readwrite, nonatomic) void (^closePreparationBlock)(void);
 @property (assign, readwrite, nonatomic) BOOL closeOnSelection;
 @property (weak, readwrite, nonatomic) id <REMenuDelegate> delegate;
+@property (weak, readwrite, nonatomic) id <REMenuDataSource> dataSource;
 
 // Style
 //
@@ -122,4 +137,8 @@ typedef NS_ENUM(NSInteger, REMenuLiveBackgroundStyle) {
 - (void)closeWithCompletion:(void (^)(void))completion;
 - (void)close;
 
+
 @end
+
+
+
