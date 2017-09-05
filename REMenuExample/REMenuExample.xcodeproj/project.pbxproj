@@ -25,7 +25,18 @@
 		30E0F7AD16D54641001949EA /* REMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E0F7A916D54641001949EA /* REMenuItem.m */; };
 		30E0F7AE16D54641001949EA /* REMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E0F7AB16D54641001949EA /* REMenuItemView.m */; };
 		30E0F7B116D54CE0001949EA /* REMenuContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E0F7B016D54CE0001949EA /* REMenuContainerView.m */; };
+		9C950C181F5F63F100F511C4 /* REMenuExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C950C171F5F63F100F511C4 /* REMenuExampleTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C950C1A1F5F63F100F511C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30E0F77216D545F7001949EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30E0F77916D545F7001949EA;
+			remoteInfo = REMenuExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		30A9E60619C628A600A68AF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -61,6 +72,9 @@
 		30E0F7AB16D54641001949EA /* REMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = REMenuItemView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		30E0F7AF16D54CE0001949EA /* REMenuContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMenuContainerView.h; sourceTree = "<group>"; };
 		30E0F7B016D54CE0001949EA /* REMenuContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMenuContainerView.m; sourceTree = "<group>"; };
+		9C950C151F5F63F100F511C4 /* REMenuExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = REMenuExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C950C171F5F63F100F511C4 /* REMenuExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REMenuExampleTests.m; sourceTree = "<group>"; };
+		9C950C191F5F63F100F511C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,13 @@
 				30E0F77E16D545F7001949EA /* UIKit.framework in Frameworks */,
 				30E0F78016D545F7001949EA /* Foundation.framework in Frameworks */,
 				30E0F78216D545F7001949EA /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C950C121F5F63F100F511C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +123,7 @@
 			children = (
 				30E0F7A516D54641001949EA /* REMenu */,
 				30E0F78316D545F7001949EA /* REMenuExample */,
+				9C950C161F5F63F100F511C4 /* REMenuExampleTests */,
 				30E0F77C16D545F7001949EA /* Frameworks */,
 				30E0F77B16D545F7001949EA /* Products */,
 			);
@@ -111,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				30E0F77A16D545F7001949EA /* REMenuExample.app */,
+				9C950C151F5F63F100F511C4 /* REMenuExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,6 +189,15 @@
 			path = ../REMenu;
 			sourceTree = "<group>";
 		};
+		9C950C161F5F63F100F511C4 /* REMenuExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C950C171F5F63F100F511C4 /* REMenuExampleTests.m */,
+				9C950C191F5F63F100F511C4 /* Info.plist */,
+			);
+			path = REMenuExampleTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,6 +218,24 @@
 			productReference = 30E0F77A16D545F7001949EA /* REMenuExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9C950C141F5F63F100F511C4 /* REMenuExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C950C1E1F5F63F100F511C4 /* Build configuration list for PBXNativeTarget "REMenuExampleTests" */;
+			buildPhases = (
+				9C950C111F5F63F100F511C4 /* Sources */,
+				9C950C121F5F63F100F511C4 /* Frameworks */,
+				9C950C131F5F63F100F511C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C950C1B1F5F63F100F511C4 /* PBXTargetDependency */,
+			);
+			name = REMenuExampleTests;
+			productName = REMenuExampleTests;
+			productReference = 9C950C151F5F63F100F511C4 /* REMenuExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -194,6 +244,13 @@
 			attributes = {
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Roman Efimov";
+				TargetAttributes = {
+					9C950C141F5F63F100F511C4 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 30E0F77916D545F7001949EA;
+					};
+				};
 			};
 			buildConfigurationList = 30E0F77516D545F7001949EA /* Build configuration list for PBXProject "REMenuExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -208,6 +265,7 @@
 			projectRoot = "";
 			targets = (
 				30E0F77916D545F7001949EA /* REMenuExample */,
+				9C950C141F5F63F100F511C4 /* REMenuExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,6 +277,13 @@
 			files = (
 				30E0F78816D545F7001949EA /* InfoPlist.strings in Resources */,
 				30A9E60719C628A600A68AF8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C950C131F5F63F100F511C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +310,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C950C111F5F63F100F511C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C950C181F5F63F100F511C4 /* REMenuExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C950C1B1F5F63F100F511C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30E0F77916D545F7001949EA /* REMenuExample */;
+			targetProxy = 9C950C1A1F5F63F100F511C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		30E0F78616D545F7001949EA /* InfoPlist.strings */ = {
@@ -350,6 +431,72 @@
 			};
 			name = Release;
 		};
+		9C950C1C1F5F63F100F511C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = REMenuExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = rimon.hanna.REMenuExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/REMenuExample.app/REMenuExample";
+			};
+			name = Debug;
+		};
+		9C950C1D1F5F63F100F511C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = REMenuExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = rimon.hanna.REMenuExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/REMenuExample.app/REMenuExample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -370,6 +517,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9C950C1E1F5F63F100F511C4 /* Build configuration list for PBXNativeTarget "REMenuExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C950C1C1F5F63F100F511C4 /* Debug */,
+				9C950C1D1F5F63F100F511C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
